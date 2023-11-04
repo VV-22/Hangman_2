@@ -57,11 +57,7 @@ public class GameController : MonoBehaviour
          GameObject currLetter = GameObject.Instantiate(letterBase, keyboardTransform);
          currLetter.GetComponentInChildren<TextMeshProUGUI>().text = ((char)i).ToString();
          String tempStr = ((char)i).ToString();
-         currLetter.GetComponent<Button>().onClick.AddListener( 
-            delegate 
-            { 
-               CheckLetter(tempStr);
-            });
+         currLetter.GetComponent<Button>().onClick.AddListener( () => { CheckLetter(tempStr);});
       }
    }
 
